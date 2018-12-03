@@ -1,0 +1,8 @@
+.bar {
+  display: flex;
+  position: relative;
+  height: 90rpx;
+  align-items: center;
+  background: blue;
+  color: #fff;
+}

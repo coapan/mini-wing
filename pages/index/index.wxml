@@ -1,0 +1,8 @@
+<navigator url='/pages/dist/index/index'>
+  <view class="bar solid-bottom">
+    <view class='ml-sm'>
+      <text class='iconfont icon-titles success-text'></text>
+      <text class='text-lg ml-xs'>color-UI样式使用>>>>>>>>></text>
+    </view>
+  </view>
+</navigator>
