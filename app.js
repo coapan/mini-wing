@@ -1,6 +1,6 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -32,8 +32,18 @@ App({
         }
       }
     })
+    // 获取系统状态栏信息
+    wx.getSystemInfo({
+      success: res => {
+        this.globalData.StatusBar = res.statusBarHeight;
+        this.globalData.CustomBar = res.platform == 'android' ? res.statusBarHeight + 50 : res.statusBarHeight + 45;
+      }
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    token: null,
+    StatusBar: null,
+    CustomBar: null
   }
 })
