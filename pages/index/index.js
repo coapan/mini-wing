@@ -2,10 +2,12 @@
 //获取应用实例
 const app = getApp()
 import api from '../../config/api.js'
+import user from '../../utils/user.js'
+
 Page({
   data: {
-    StatusBar: app.globalData.StatusBar,
-    CustomBar: app.globalData.CustomBar,
+    StatusBar: wx.StatusBar,
+    CustomBar: wx.CustomBar,
     mottoImg: '',
     userInfo: {},
     hasUserInfo: false,
@@ -17,17 +19,16 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    wx.request({
-      url: api.index,
-      success: res => {
+  onLoad: function() {
+    wx.requestData(api.index).then(res => {
+      if (res.code === 1) {
         this.setData({
-          mottoImg: res.data.data.mottoImg
+          mottoImg: res.data.mottoImg
         })
       }
     })
-    
   },
+  onShow() {},
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
