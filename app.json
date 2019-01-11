@@ -1,31 +1,39 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/home/home",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#cce6ff",
     "navigationBarTitleText": "WeChat",
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#333333",
-    "selectedColor": "#fc338c",
-    "backgroundColor": "#cccccc",
+    "color": "#aaa",
+    "selectedColor": "#0081ff",
+    "backgroundColor": "#fff",
+    "borderStyle":"white",
     "list": [
       {
-        "pagePath": "pages/logs/logs",
-        "text": "首页"
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home_icon.png",
+        "selectedIconPath": "images/selected_1.png",
+        "text": "江"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "视觉"
+        "iconPath": "images/fill_icon.png",
+        "selectedIconPath": "images/selected_fill_icon.png",
+        "text": "湖"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "个人"
+        "iconPath": "images/meaning_icon.png",
+        "selectedIconPath": "images/selected_meaning_icon.png",
+        "text": "意"
       }
     ]
   }

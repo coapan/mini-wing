@@ -1,8 +1,13 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<custom style="height:{{CustomBar}}px;">
+  <bar class="fixed gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      <text class='icon-back'></text> 背景颜色
+    </navigator>
+  </bar>
+</custom>
 
-  <text>{{StatusBar}}</text>
-</view>
+<view class='grid'>
+    <view class='padding-sm text-center'>走进江湖</view>
+    </view>
+
+    <button class='bg-blue button-hover'>走进江湖</button>

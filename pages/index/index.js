@@ -9,17 +9,8 @@ Page({
     StatusBar: wx.StatusBar,
     CustomBar: wx.CustomBar,
     mottoImg: '',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function() {
+  onShow() {
     wx.requestData(api.index).then(res => {
       if (res.code === 1) {
         this.setData({
@@ -28,13 +19,9 @@ Page({
       }
     })
   },
-  onShow() {},
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+  bindmottotap(){
+    wx.switchTab({
+      url: '/pages/home/home',
     })
   }
 })

@@ -1,1 +1,13 @@
-<image class="motto-paper" mode="aspectFill" src="{{mottoImg}}"></image>
+<view class="container">
+  <image class="slogan-paper" mode="aspectFill" src="{{mottoImg}}"></image>
+  <view class="session-content">
+    <view class="slogan-wrapper">
+      <text class="slogan-text">在这诺大的江湖里</text>
+      <text class="slogan-text">能与你相遇</text>
+      <text class="slogan-text">幸甚</text>
+    </view>
+    <view bindtap="bindmottotap" class="usermotto">
+      <text class="user-motto padding-sm">走进江湖</text>
+    </view>
+  </view>
+</view>
