@@ -25,9 +25,11 @@ export default {
               if (res.statusCode === 200) {
                 resolve(res.data)
               } else if (res.statusCode === 401) {
-                wx.showSuccessToast('请先登录！')
+                wx.showErrorToast('请先登录！')
+                wx.removeStorageSync('userInfo')
+                wx.removeStorageSync('token')
               } else if (res.statusCode === 500) {
-                wx.showSuccessToast('服务器错误！')
+                wx.showErrorToast('服务器错误！')
               } else {
                 reject(res.errMsg)
               }
@@ -37,6 +39,61 @@ export default {
             }
           })
         })
+      },
+
+      // 微信小程序授权登录
+      wx.loginByWeixin = (userInfo) => {
+        let code = null
+        return new Promise(function(resolve, reject) {
+          return wx.log_in().then(res => {
+            code = res.code
+            return userInfo
+          }).then(userInfo => {
+            wx.requestData(api.login, {
+              code: code,
+              userInfo: userInfo
+            }).then(res => {
+              if (res.code === 1) {
+                wx.showSuccessToast('登录成功')
+
+                // 缓存用户信息和 token
+                try {
+                  wx.setStorageSync('userInfo', userInfo)
+                  wx.setStorageSync('token', res.token)
+                } catch (e) {
+                  console.log('本地数据同步缓存发生错误' + e)
+                }
+
+                resolve(res)
+              } else {
+                wx.showErrorToast(res.errMsg)
+                reject(res)
+              }
+            }).catch(err => {
+              reject(err)
+            })
+          }).catch(err => {
+            reject(err)
+          })
+        })
+      },
+
+      wx.log_in = () => {
+        return new Promise(function(resolve, reject) {
+          wx.login({
+            success: function(res) {
+              if (res.code) {
+                console.log('登录成功')
+                resolve(res);
+              } else {
+                reject(res);
+              }
+            },
+            fail: function(err) {
+              reject(err);
+            }
+          });
+        });
       },
 
       // 成功Toast提示

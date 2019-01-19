@@ -1,8 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-import api from '../../config/api.js'
-import user from '../../utils/user.js'
+import api from '../../utils/api.js'
 
 Page({
   data: {
@@ -11,6 +10,9 @@ Page({
     mottoImg: '',
   },
   onShow() {
+    this.getIndex()
+  },
+  getIndex() {
     wx.requestData(api.index).then(res => {
       if (res.code === 1) {
         this.setData({

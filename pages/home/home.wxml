@@ -5,3 +5,68 @@
     </navigator>
   </bar>
 </custom>
+
+<view class="page {{skin?' invert ':' '}}">
+  <list class="grid col-3">
+    <item>
+      <text class='icon-wanhua text-blue'></text>
+      <text>万花</text>
+    </item>
+    <item>
+      <text class='icon-shaolin text-orange'></text>
+      <text>少林</text>
+    </item>
+    <item>
+      <text class='icon-mingjiao text-yellow'></text>
+      <text>明教</text>
+    </item>
+    <item>
+      <text class='icon-tangmen text-olive'>
+        <tag class="badge">99+</tag>
+      </text>
+      <text>唐门</text>
+    </item>
+    <item>
+      <text class='icon-qixiu text-cyan'></text>
+      <text>七秀</text>
+    </item>
+    <item>
+      <text class='icon-wudu text-blue'>
+        <tag class="badge"></tag>
+      </text>
+      <text>五毒</text>
+    </item>
+    <item>
+      <text class='icon-chunyang text-purple'></text>
+      <text>纯阳</text>
+    </item>
+    <item>
+      <text class='icon-tiance text-mauve'></text>
+      <text>天策</text>
+    </item>
+    <item>
+      <text class='icon-gaibang text-pink'></text>
+      <text>丐帮</text>
+    </item>
+    <item>
+      <text class='icon-cangjian text-purple'></text>
+      <text>藏剑</text>
+    </item>
+    <item>
+      <text class='icon-cangyun text-mauve'></text>
+      <text>苍云</text>
+    </item>
+    <item>
+      <text class='icon-changge text-pink'></text>
+      <text>长歌</text>
+    </item>
+    <item>
+      <text class='icon-badao text-pink'></text>
+      <text>霸刀</text>
+    </item>
+    <item>
+      <text class='icon-penglai text-pink'></text>
+      <text>蓬莱</text>
+    </item>
+  </list>
+</view>

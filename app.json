@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
+    "pages/album/album",
+    "pages/user/user",
     "pages/logs/logs"
   ],
   "window": {
@@ -19,21 +21,33 @@
     "list": [
       {
         "pagePath": "pages/home/home",
-        "iconPath": "images/home_icon.png",
-        "selectedIconPath": "images/selected_1.png",
-        "text": "江"
+        "iconPath": "images/fill_icon.png",
+        "selectedIconPath": "images/selected_fill_icon.png",
+        "text": "首页"
       },
       {
         "pagePath": "pages/logs/logs",
         "iconPath": "images/fill_icon.png",
         "selectedIconPath": "images/selected_fill_icon.png",
-        "text": "湖"
+        "text": "江湖"
+      },
+      {
+        "pagePath": "pages/album/album",
+        "iconPath": "images/album_icon.png",
+        "selectedIconPath": "images/selected_album.png",
+        "text": "故事册"
       },
       {
         "pagePath": "pages/logs/logs",
         "iconPath": "images/meaning_icon.png",
         "selectedIconPath": "images/selected_meaning_icon.png",
         "text": "意"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user_icon.png",
+        "selectedIconPath": "images/selected_user.png",
+        "text": "本大侠"
       }
     ]
   }

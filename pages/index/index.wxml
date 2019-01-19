@@ -1,4 +1,5 @@
 <view class="container">
+  <!-- <image class="slogan-paper" mode="aspectFill" src="/images/motto.jpg"></image> -->
   <image class="slogan-paper" mode="aspectFill" src="{{mottoImg}}"></image>
   <view class="session-content">
     <view class="slogan-wrapper">
