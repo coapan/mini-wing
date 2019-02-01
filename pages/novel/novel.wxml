@@ -1,0 +1,28 @@
+<custom style="height:{{CustomBar}}px;">
+  <bar class="fixed gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+    <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
+      书库
+    </navigator>
+  </bar>
+</custom>
+
+<bar class="solid-bottom margin-top">
+  <view class='action'>
+    <text class='icon-titles text-orange '></text> 文章类卡片
+  </view>
+</bar>
+<card class="article no-card">
+  <item wx:for="{{10}}" wx:key class="shadow">
+    <view class="title">这里有个戏精铲屎官，主子了解一下？</view>
+    <view class="content">
+      <image src="https://image.weilanwl.com/img/4x3-3.jpg" mode="aspectFill"></image>
+      <view class="desc">
+        <view class='text-content'> 这是一个伪铲屎官为了给自己的程序凑字数瞎几把乱写的一堆文字，了解一下就OK！ヾ(=･ω･=)o</view>
+        <view>
+          <tag class='bg-red light sm round'>假装有猫系列</tag>
+          <tag class='bg-green light sm round'>戏精系列</tag>
+        </view>
+      </view>
+    </view>
+  </item>
+</card>

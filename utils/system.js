@@ -109,6 +109,7 @@ export default {
       wx.showErrorToast = (msg) => {
         wx.showToast({
           title: msg,
+          icon: 'none',
           // image: '/images/icon_error.png'
           duration: 3000
         })

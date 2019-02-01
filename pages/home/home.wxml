@@ -1,72 +1,87 @@
-<custom style="height:{{CustomBar}}px;">
-  <bar class="fixed gradual-blue" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+<view class="cu-custom" style="height:{{CustomBar}}px;">
+  <view class="cu-bar fixed gradual-pink" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
     <navigator class='action' open-type="navigateBack" delta="1" hover-class="none">
-      首页
+      剑网三故事站
     </navigator>
-  </bar>
-</custom>
+  </view>
+</view>
 
-<view class="page {{skin?' invert ':' '}}">
-  <list class="grid col-3">
-    <item>
-      <text class='icon-wanhua text-blue'></text>
-      <text>万花</text>
-    </item>
-    <item>
-      <text class='icon-shaolin text-orange'></text>
-      <text>少林</text>
-    </item>
-    <item>
-      <text class='icon-mingjiao text-yellow'></text>
-      <text>明教</text>
-    </item>
-    <item>
-      <text class='icon-tangmen text-olive'>
-        <tag class="badge">99+</tag>
-      </text>
-      <text>唐门</text>
-    </item>
-    <item>
-      <text class='icon-qixiu text-cyan'></text>
-      <text>七秀</text>
-    </item>
-    <item>
-      <text class='icon-wudu text-blue'>
-        <tag class="badge"></tag>
-      </text>
-      <text>五毒</text>
-    </item>
-    <item>
-      <text class='icon-chunyang text-purple'></text>
-      <text>纯阳</text>
-    </item>
-    <item>
-      <text class='icon-tiance text-mauve'></text>
-      <text>天策</text>
-    </item>
-    <item>
-      <text class='icon-gaibang text-pink'></text>
-      <text>丐帮</text>
-    </item>
-    <item>
-      <text class='icon-cangjian text-purple'></text>
-      <text>藏剑</text>
-    </item>
-    <item>
-      <text class='icon-cangyun text-mauve'></text>
-      <text>苍云</text>
-    </item>
-    <item>
-      <text class='icon-changge text-pink'></text>
-      <text>长歌</text>
-    </item>
-    <item>
-      <text class='icon-badao text-pink'></text>
-      <text>霸刀</text>
-    </item>
-    <item>
-      <text class='icon-penglai text-pink'></text>
-      <text>蓬莱</text>
-    </item>
-  </list>
+<swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+  <swiper-item wx:for="{{4}}" wx:key class="{{cardCur==index?'cur':''}}">
+    <view class='bg-img shadow-blur' style="background-image:url(http://192.168.1.4/uploads/20190201/2c5871e93e8f0691ea7d4e87ad9a87fe.jpg)"></view>
+  </swiper-item>
+</swiper>
+
+<view class="cu-bar margin-top">
+  <view class='action'>
+    <text class='icon-appreciatefill text-pink'></text> 精品小说
+  </view>
+  <view class='action'>
+    <text class='icon-refresh text-pink'></text> 换一批
+  </view>
+</view>
+
+<view class="cu-card dynamic no-card">
+  <view wx:for="1" wx:key class="cu-item shadow">
+    <view class="grid col-4 grid-square flex-sub padding-lr">
+      <view class="bg-img" style="background-image:url(http://192.168.1.4/uploads/20190201/2c5871e93e8f0691ea7d4e87ad9a87fe.jpg);" wx:for="{{8}}" wx:key>
+      <text class='text-xs'>异世之风流大法师</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <scroll-view scroll-x class="bg-white" scroll-with-animation scroll-left="{{scrollLeft}}">
+</scroll-view> -->
+
+<view class="cu-bar margin-top">
+  <view class='action'>
+    <text class='icon-musicfill text-pink'></text> 音乐推荐
+  </view>
+  <view class='action'>
+    <text class='icon-refresh text-pink'></text> 更多
+  </view>
+</view>
+
+<view class="cu-card dynamic no-card">
+  <view wx:for="1" wx:key class="cu-item shadow">
+    <view class="grid col-3 grid-square flex-sub padding-lr">
+      <view class="bg-img" style="background-image:url(http://192.168.1.4/uploads/20190201/2c5871e93e8f0691ea7d4e87ad9a87fe.jpg);" wx:for="{{9}}" wx:key>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar margin-top">
+  <view class='action'>
+    <text class='icon-videofill text-pink'></text> 视频收藏
+  </view>
+  <view class='action'>
+    <text class='icon-refresh text-pink'></text> 更多
+  </view>
+</view>
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view wx:for="{{5}}" wx:key class="cu-item shadow">
+    <view class='image'>
+      <image src="http://192.168.1.4/uploads/20190201/2c5871e93e8f0691ea7d4e87ad9a87fe.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">福利</view>
+      <view class='cu-bar bg-shadeBottom'>我和制服不得不说的那些事！</view>
+    </view>
+    <view class="cu-list menu menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(http://192.168.1.4/uploads/20190201/2c5871e93e8f0691ea7d4e87ad9a87fe.jpg);"></view>
+        <view class='content flex-sub'>
+          <view class='text-grey'>傻乎乎</view>
+          <view class='text-gray text-sm flex justify-between'>
+            十天前
+            <view class="text-gray text-sm">
+              <text class="icon-attentionfill"></text> 10
+              <text class="icon-appreciatefill"></text> 20
+              <text class="icon-messagefill"></text> 30
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

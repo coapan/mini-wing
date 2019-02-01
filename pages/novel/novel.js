@@ -1,5 +1,4 @@
-// pages/home/home.js
-import api from '../../utils/api.js'
+// pages/novel/novel.js
 Page({
 
   /**
@@ -8,14 +7,13 @@ Page({
   data: {
     StatusBar: wx.StatusBar,
     CustomBar: wx.CustomBar,
-    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**

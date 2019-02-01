@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/home/home",
+    "pages/novel/novel",
     "pages/album/album",
     "pages/user/user",
     "pages/logs/logs"
@@ -23,31 +24,25 @@
         "pagePath": "pages/home/home",
         "iconPath": "images/fill_icon.png",
         "selectedIconPath": "images/selected_fill_icon.png",
-        "text": "首页"
+        "text": "飞"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/novel/novel",
         "iconPath": "images/fill_icon.png",
         "selectedIconPath": "images/selected_fill_icon.png",
-        "text": "江湖"
+        "text": "鸢"
       },
       {
         "pagePath": "pages/album/album",
         "iconPath": "images/album_icon.png",
         "selectedIconPath": "images/selected_album.png",
-        "text": "故事册"
+        "text": "泛"
       },
       {
         "pagePath": "pages/logs/logs",
         "iconPath": "images/meaning_icon.png",
         "selectedIconPath": "images/selected_meaning_icon.png",
-        "text": "意"
-      },
-      {
-        "pagePath": "pages/user/user",
-        "iconPath": "images/user_icon.png",
-        "selectedIconPath": "images/selected_user.png",
-        "text": "本大侠"
+        "text": "月"
       }
     ]
   }

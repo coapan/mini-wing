@@ -1,4 +1,6 @@
 // pages/album/album.js
+let app = getApp()
+import api from '../../utils/api.js'
 Page({
 
   /**
@@ -7,20 +9,27 @@ Page({
   data: {
     StatusBar: wx.StatusBar,
     CustomBar: wx.CustomBar,
+    content: '',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.requestData(api.index).then(res => {
+      if (res.code === 1) {
+        this.setData({
+          content: res.data.content.content
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    
   },
 
   /**
